@@ -2,6 +2,7 @@
 
 HeapBin::HeapBin(){
     raiz = NULL;
+    tamanho = 0;
 }
 
 HeapBin::~HeapBin(){
@@ -29,7 +30,7 @@ NoBin* HeapBin::removeMenor(){
         }
         aux = aux->irmao;
     }
-    aux->irmao = menor->irmao;
+
     NoBin* raizInvertida;
     inverteListaFilhos(menor->filho, &raizInvertida);
     menor->filho->irmao = NULL;
@@ -41,6 +42,11 @@ NoBin* HeapBin::removeMenor(){
     }
 
     raiz = uniao(raiz, raizInvertida);
+
+    menor->irmao =NULL;
+    menor->filho =NULL;
+    tamanho--;
+    return menor;
 }
 
 void HeapBin::link(NoBin* raiz1, NoBin* raiz2){
@@ -144,6 +150,7 @@ void HeapBin::insere(int chave){
     else {
         raiz = uniao(raiz, aux);
     }
+    tamanho++;
 }
 
 void HeapBin::imprimeHeapConsole(){
