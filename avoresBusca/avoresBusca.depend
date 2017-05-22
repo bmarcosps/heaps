@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1495413659 source:c:\users\brunom\dropbox\arvores ed2\heaps\avoresbusca\main.cpp
+	<iostream>
+	<iomanip>
+	"AVL.h"
+	"Splay.h"
+
+1495413659 c:\users\brunom\dropbox\arvores ed2\heaps\avoresbusca\avl.h
+	<iostream>
+	<iomanip>
+
+1495413579 c:\users\brunom\dropbox\arvores ed2\heaps\avoresbusca\splay.h
+
